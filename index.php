@@ -45,8 +45,8 @@ var_dump(3 <=> 2); //int greater than 0
 $a = 3;
 $b = '3';
 $c = 5;
-var_dump($a == $b); //true type juggling
-var_dump($a === $b); //false
+var_dump($a == $b); //true //type juggling
+var_dump($a === $b); //false //identical operator
 var_dump($a != $b); //false
 var_dump($a !== $b); //true
 var_dump($a <> $c); //true
