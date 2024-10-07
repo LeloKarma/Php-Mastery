@@ -86,4 +86,8 @@ $firstname = 'Lelo';
 $surname = 'Karma';
 
 echo 'I am '. $firstname . ' ' . $surname . '!.';
+
+/*
+*Arrays
+*/
 ?>
