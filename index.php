@@ -86,44 +86,4 @@ $firstname = 'Lelo';
 $surname = 'Karma';
 
 echo 'I am '. $firstname . ' ' . $surname . '!.';
-echo '<br>';
-echo '<br>';
-
-/*
-*Arrays
-*/
-
-$names = ['Harry', 'Ron', 'Hermione'];
-$status = [
-    'name' => 'James Potter',
-    'status' => 'dead',
-];
-//to add values to an array
-$names[] = 'Neville';
-$status['message'] = 'test';
-print_r($names);
-echo '<br>';
-print_r($status);
-
-//to remove a value in an array we use unset
-unset($status['status']);
-print_r($status);
-echo '<br>';
-
-$names['badguy'] = 'Voldemort';
-$names[8] = 'Snape';
-$names[] = 'McGonagall';
-print_r($names);
-//res: Array ( [0] => Harry [1] => Ron [2] => Hermione [3] => Neville [badguy] => Voldemort [8] => Snape [9] => McGonagall ) 
-
-//CHECKING IF AN ARRAY IS EMPTY OR NOT using isset() and empty()
-$string = '';
-$array = [];
-$names = ['Lelo', 'Karma', 'Bull'];
-var_dump(empty($string)); //true
-var_dump(empty($array)); //true
-var_dump(empty($names)); //false
-var_dump(isset($array)); //false
-var_dump(isset($names[2])); //true
-
 ?>
