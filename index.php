@@ -86,4 +86,71 @@ $firstname = 'Lelo';
 $surname = 'Karma';
 
 echo 'I am '. $firstname . ' ' . $surname . '!.';
+
+/*
+*Arrays
+*/
+
+$names = ['Harry', 'Ron', 'Hermione'];
+$status = [
+    'name' => 'James Potter',
+    'status' => 'dead',
+];
+//to add values to an array
+$names[] = 'Neville';
+$status['message'] = 'test';
+print_r($names);
+echo '<br>';
+print_r($status);
+
+//to remove a value in an array we use unset
+unset($status['status']);
+print_r($status);
+echo '<br>';
+
+$names['badguy'] = 'Voldemort';
+$names[8] = 'Snape';
+$names[] = 'McGonagall';
+print_r($names);
+//res: Array ( [0] => Harry [1] => Ron [2] => Hermione [3] => Neville [badguy] => Voldemort [8] => Snape [9] => McGonagall ) 
+
+//CHECKING IF AN ARRAY IS EMPTY OR NOT using isset() and empty()
+$string = '';
+$array = [];
+$names = ['Lelo', 'Karma', 'Bull'];
+var_dump(empty($string)); //true
+var_dump(empty($array)); //true
+var_dump(empty($names)); //false
+var_dump(isset($array)); //false
+var_dump(isset($names[2])); //true
+echo '<br>';
+echo '<br>';
+
+//using in_array() and array_search()
+$containsLelo = in_array('Lelo', $names);
+var_dump($containsLelo);
+
+$whereLelo = array_search('Bull', $names);
+var_dump($whereLelo);
+
+//array funcs sort(), asort(), ksort() check docs for more
+echo '<br>';
+
+//array_keys, array_values
+
+$properties = [
+    'firstname' => 'Tom',
+    'surname' => 'Riddle',
+    'house' => 'Slytherin'
+];
+$keys = array_keys($properties);
+var_dump($keys);
+echo '<br>';
+$values = array_values($properties);
+var_dump($values);
+echo '<br>';
+echo '<br>';
+
+$all = array_merge($names, $properties);
+var_dump($all);
 ?>
