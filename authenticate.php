@@ -1,5 +1,8 @@
 <?php
+
+setcookie('username', $_POST['username']);
 $submitted = !empty($_POST);
+
 ?>
 
 <!DOCTYPE html>

@@ -12,6 +12,13 @@ $looking = isset($_GET['title']) || isset($_GET['author']);
     <title>Bookstore</title>
 </head>
 <body>
+    <p>
+        <?php if (isset($_COOKIE['username'])) {
+            echo "You are " . $_COOKIE['username'];
+         } else {
+            echo " You are not authenticated.";
+         
+         } ?></p>
     <p>You lookin'? <?php echo (int)$looking; ?></p>
     <p>The book you are looking for is</p>
     <ul>
