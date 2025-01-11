@@ -153,4 +153,63 @@ echo '<br>';
 
 $all = array_merge($names, $properties);
 var_dump($all);
+
+/*
+*Conditionals
+*A control structure is like a traffic diversion sign.
+*It directs the execution flow depending on some predifined conditions.
+*
+*A block of code is a group of statements enclosed by a {}
+*/
+echo "Before the conditional";
+if(4 > 3) {
+    echo "Inside the conditional";
+}
+if (3 > 4) {
+    echo "This will not be printed!";
+}
+echo "After the conditional.";
+
+
+if(4 > 5){
+    echo "Not printed!";
+}else if(4 == 4 ){
+    echo " Printed.";
+} elseif(4 > 2){
+    echo "Not evaluated.";
+} else {
+    echo "Not evaluated.";
+}
+
+if ( 4 == 4) {
+    echo "Printed!";
+}
+
+/*
+*Switch Case
+*
+*This evaluates only one expression and executes it depending on its value
+*/
+$title = "Lord of the Rings";
+switch ($title) {
+    case 'Harry Potter':
+        echo "Nice Story, a bit too long";
+        break;
+    case 'Lord of the Rings';
+        echo "Classic!";
+        break;
+    default:
+        echo "Dunno that one.";
+        break;
+}
+
+
+/*
+*Loops
+*/
+$i = 1;
+while ($i < 4) {
+    echo $i . " ";
+    $i++;
+}
 ?>
